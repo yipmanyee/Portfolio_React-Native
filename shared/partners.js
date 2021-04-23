@@ -22,9 +22,9 @@ export const PARTNERS = [
     },
     {
         id: 3,
-        name: "Node Outdoor Apparel",
+        name: "Weekday Golf Rates",
         image: "/assets/images/node-logo.png",
         featured: true,
-        description: "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
+        description: "Round of Golf Walking: $39; Round of Golf with Cart: $5"
     }
 ]
