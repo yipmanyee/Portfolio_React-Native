@@ -1,27 +1,42 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
+import { GOLFCOURSES } from '../shared/golfcourses';
 
-function Directory(props) {
+class Directory extends Component {
 
-    const renderDirectoryItem = ({item}) => {
-        return (
-            <ListItem
-                title={item.name}
-                subtitle={item.description}
-                onPress={() => props.onPress(item.id)}
-                leftAvatar={{ source: require('./images/golfcoursemain.jpg')}}
-            />
+    constructor(props) {
+        super(props);
+        this.state = {
+            golfcourses: GOLFCOURSES
+        };
+    }
+
+    static navigationOptions = {
+        title: 'Directory'
+    }
+
+    render() {
+        const { navigate } = this.props.navigation;
+        const renderDirectoryItem = ({item}) => {
+            return (
+                <ListItem
+                    title={item.name}
+                    subtitle={item.description}
+                    onPress={() => navigate('GolfcourseInfo', { golfcourseId: item.id })}
+                    leftAvatar={{ source: require('./images/golfcoursemain.jpg')}}
+                />
         );
     };
 
     return (
         <FlatList
-            data={props.golfcourses}
+            data={this.state.golfcourses}
             renderItem={renderDirectoryItem}
             keyExtractor={item => item.id.toString()}
         />
-    );
+        );
+    }
 }
 
 export default Directory;

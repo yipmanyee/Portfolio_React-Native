@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { Card } from 'react-native-elements';
+import { GOLFCOURSES } from '../shared/golfcourses';
 
 function RenderGolfcourse({golfcourse}) {
+    
     if (golfcourse) {
         return (
             <Card 
@@ -18,8 +20,24 @@ function RenderGolfcourse({golfcourse}) {
     return <View />;
 }
 
-function GolfcourseInfo(props) {
-    return <RenderGolfcourse golfcourse={props.golfcourse} />;
+class GolfcourseInfo extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            golfcourses: GOLFCOURSES
+        };
+    }
+
+    static navigationOptions = {
+        title: 'Meadow Park Golf Course Information'
+    }
+
+    render() {
+        const golfcourseId = this.props.navigation.getParam('golfcourseId');
+        const golfcourse = this.state.golfcourses.filter(golfcourse => golfcourse.id === golfcourseId)[0];
+        return <RenderGolfcourse golfcourse={golfcourse} />;
+    }
 }
 
 export default GolfcourseInfo;
