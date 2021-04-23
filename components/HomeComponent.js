@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView, TextInput } from 'react-native';
+import { View, Text, Image, ScrollView, TextInput, StyleSheet } from 'react-native';
+import { Card, ListItem, Button, Icon } from 'react-native-elements';
 
 function Home(props) {
     return (
@@ -23,5 +24,12 @@ function Home(props) {
         </ScrollView>
     );
 }
+
+const styles = StyleSheet.create({
+        image: {
+        width: 150,
+        height: 150,
+    },
+})
 
 export default Home;   
