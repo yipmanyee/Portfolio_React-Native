@@ -4,21 +4,21 @@ export const HOURS = [
         name: "Weekday Golf Rates",
         image: "/assets/images/golfcart.jpg",
         featured: false,
-        description: "Round of Golf Walking: $39 </br> Round of Golf wiht Cart: $55"
+        description: "Round of Golf Walking: $39\nRound of Golf with Cart: $55"
     },
     {
         id: 1,
         name: "Weekend Golf Rates",
         image: "/assets/images/golfcoursec18",
         featured: false,
-        description: "Round of Golf Walking: $49 </br> Round of Golf wiht Cart: $65"
+        description: "Round of Golf Walking: $49\nRound of Golf with Cart: $65"
     },
     {
         id: 2,
         name: "Hours",
         image: "/assets/images/proshop.jpg",
         featured: false,
-        description: "Golf Shop: 6.30am till Dusk </br> Driving Range: 6.30am till Dusk"
+        description: "Golf Shop: 6.30am till Dusk\nDriving Range: 6.30am till Dusk"
     },
     
 ]

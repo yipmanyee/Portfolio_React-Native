@@ -25,6 +25,6 @@ export const PARTNERS = [
         name: "Weekday Golf Rates",
         image: "/assets/images/node-logo.png",
         featured: true,
-        description: "Round of Golf Walking: $39; Round of Golf with Cart: $5"
+        description: "Round of Golf Walking: $39\nRound of Golf with Cart: $55"
     }
 ]
