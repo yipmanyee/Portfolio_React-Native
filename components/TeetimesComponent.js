@@ -12,11 +12,11 @@ class Teetimes extends Component {
     }
 
     static navigationOptions = {
-        title: 'Tee Times'
+        title: 'Teetimes'
     };
 
     render() {
-	    const renderRateItem = ({item}) => {
+ 	    const renderPartnerItem = ({item}) => {
             return (
             <ListItem
                 title={item.name}
@@ -43,11 +43,12 @@ class Teetimes extends Component {
 
 function Mission() {
     return (
-        <Card title="Our  Mission">
+        <Card title="Tee Times" image={require('./images/courselayout.png')}>
             <Text style={{ margin: 10}}>
-            Meadow Park Golf Course is a fun and challenging place to play, practice and socialize. 
+            Book your Tee time online or call our Pro Shop at 253-473-3033 and reserve a round on our fun and challenging course.
             Whether you are professional tour player or and amateur 6 to 86 Meadow Park provides it all at an affordable price.
             </Text>
+            
         </Card>
     );
 }

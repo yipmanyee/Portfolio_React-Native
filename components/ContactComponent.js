@@ -13,7 +13,7 @@ class Contact extends Component {
     render(){
 	return (
         <ScrollView>
-			<Card title="Meadow Park Golf Course" wrapperStyle={{ margin: 5 }}
+			<Card title="Meadow Park Golf Course" wrapperStyle={{ margin: 5 } }
                 image={require('./images/proshop.jpg')}>
                     <Text style={{ margin: 10}}>
                     {`7108 Lakewood Dr\nTacoma, WA98467\nU.S.A.`}

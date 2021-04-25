@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
-import Directory from './DirectoryComponent';
+import Facilities from './FacilitiesComponent';
 import GolfcourseInfo from './GolfcourseInfoComponent';
 import Teetimes from './TeetimesComponent';
 import Contact from './ContactComponent';
@@ -11,13 +11,13 @@ import { createAppContainer } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import SafeAreaView from 'react-native-safe-area-view';
 
-const DirectoryNavigator = createStackNavigator(
+const FacilitiesNavigator = createStackNavigator(
     {
-        Directory: { 
-            screen: Directory,
+        Facilities: { 
+            screen: Facilities,
             navigationOptions: ({navigation}) => ({
                 headerLeft: <Icon
-                    name='list'
+                    name='info-circle'
                     type='font-awesome'
                     iconStyle={styles.stackIcon}
                     onPress={() => navigation.toggleDrawer()}
@@ -27,7 +27,7 @@ const DirectoryNavigator = createStackNavigator(
         GolfcourseInfo: { screen: GolfcourseInfo }
     }, 
     {
-        initialRouteName: 'Directory',
+        initialRouteName: 'Facilities',
         defaultNavigationOptions: {
             headerStyle: {
                 backgroundColor: '#20972D'
@@ -116,7 +116,7 @@ const CustomDrawerContentComponent = props => (
             forceInset={{top: 'always', horizontal: 'never'}}>
             <View style={styles.drawerHeader}>
                 <View style={{flex: 1}}>
-                    <Image source={require('./images/logo.png')} style={styles.drawerImage} />
+                    <Image source={require('./images/logogc.png')} style={styles.drawerImage} />
                 </View>
                 <View style={{flex: 2}}>
                     <Text style={styles.drawerHeaderText}>Meadow Park Golf Course</Text>
@@ -136,16 +136,16 @@ const MainNavigator = createDrawerNavigator(
                         name='home'
                         type='font-awesome'
                         size={24}
-                        color={tintColor}
+                        color={'activeTintColor: #20972D', 'inactiveTintColor: #1999CE'}
                     />
                 )
             }        
         },
-        Directory: { screen: DirectoryNavigator,
+        Facilities: { screen: FacilitiesNavigator,
             navigationOptions: {
                 drawerIcon: ({tintColor}) => (
                     <Icon
-                        name='list'
+                        name='info-circle'
                         type='font-awesome'
                         size={24}
                         color={tintColor}
