@@ -136,7 +136,7 @@ const MainNavigator = createDrawerNavigator(
                         name='home'
                         type='font-awesome'
                         size={24}
-                        color={'activeTintColor: #20972D', 'inactiveTintColor: #1999CE'}
+                        color={'activeTintColor: #20972D', 'inactiveTintColor: #20972D'}
                     />
                 )
             }        
