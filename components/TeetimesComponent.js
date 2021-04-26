@@ -3,7 +3,6 @@ import { Alert, Modal, Pressable, Text, View, ScrollView, StyleSheet,
     Picker, Switch, Button } from 'react-native';
 import { Card, ListItem, Icon, Input } from 'react-native-elements';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { timing } from 'react-native-reanimated';
 
 class Teetimes extends Component {
         constructor(props) {
@@ -127,14 +126,23 @@ class Teetimes extends Component {
 
 function Mission() {
     return (
+        <ScrollView>
         <Card title="Tee Times"         
         image={require('./images/courselayout.png')}>
             <Text style={{ margin: 10}}>
             Book your Tee time online or call our Pro Shop at 253-473-3033 and reserve a round on our fun and challenging course.
             Whether you are professional tour player or and amateur 6 to 86 Meadow Park provides it all at an affordable price.
             </Text>
-            
+        
         </Card>
+        <Card title="Rates"         
+        image={require('./images/golfcart.jpg')}>
+            <Text style={{ margin: 5}}>
+                Weekday Golf Rates: Round of Golf Walking $39 / Round of Golf with Cart $55</Text>
+            <Text style={{ margin: 5}}>
+                Weekend Golf Rates: Round of Golf Walking $49 / Round of Golf with Cart $65</Text>
+        </Card>
+        </ScrollView>
     );
 }
 

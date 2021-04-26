@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Text, ScrollView } from 'react-native';
+import { Text, ScrollView, Button } from 'react-native';
 import { Card, } from 'react-native-elements'
-
-
 
 class Contact extends Component {
 
@@ -21,7 +19,7 @@ class Contact extends Component {
                 <Text style={{ margin: 10}}>
                     {`Phone: 1-253-473-3033\nEmail: meadow@mpgc.com`}
                 </Text>
-                </Card>
+            </Card>
 		</ScrollView>
     );
 	}
