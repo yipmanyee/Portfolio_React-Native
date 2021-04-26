@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import { FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
+import { baseUrl } from '../shared/baseUrl';
 import { GOLFCOURSES } from '../shared/golfcourses';
+
 
 class Facilities extends Component {
 
@@ -13,7 +15,7 @@ class Facilities extends Component {
     }
 
     static navigationOptions = {
-        title: 'Facility'
+        title: 'Facilities'
     }
 
     render() {
@@ -24,7 +26,7 @@ class Facilities extends Component {
                     title={item.name}
                     subtitle={item.description}
                     onPress={() => navigate('GolfcourseInfo', { golfcourseId: item.id })}
-                    leftAvatar={{ source: require('./images/golfcoursemain.jpg')}}
+                    leftAvatar={{ source: {uri: baseUrl + item.image}}}
                 />
         );
     };

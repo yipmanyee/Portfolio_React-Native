@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { Card } from 'react-native-elements';
 import { GOLFCOURSES } from '../shared/golfcourses';
+import { baseUrl } from '../shared/baseUrl';
 
 function RenderGolfcourse({golfcourse}) {
     
@@ -9,7 +10,7 @@ function RenderGolfcourse({golfcourse}) {
         return (
             <Card 
                 featuredTitle={golfcourse.name}
-                image={require('./images/golfcoursec18.jpg')}
+                image={{url: baseUrl + golfcourse.image}}
             >
                 <Text style={{margin: 10}}>
                     {golfcourse.description}
@@ -27,10 +28,6 @@ class GolfcourseInfo extends Component {
         this.state = {
             golfcourses: GOLFCOURSES
         };
-    }
-
-    static navigationOptions = {
-        title: 'Meadow Park Golf Course Information'
     }
 
     render() {

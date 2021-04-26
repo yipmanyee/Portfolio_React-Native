@@ -25,6 +25,6 @@ export const GOLFCOURSES = [
         name:"Rentals",
         image: "/assets/images/golfcart.jpg",
         featured: true,
-        description: "Power Cart $20 - subject to availability\n Pull Cart $5 \n Rental Sets $20-$25."
+        description: "Power Cart $20 - subject to availability \n Pull Cart $5 \n Rental Sets $20-$25."
     }
 ];
