@@ -22,7 +22,7 @@ class Facilities extends Component {
         const { navigate } = this.props.navigation;
         const renderFacilityItem = ({item}) => {
             return (
-                <ListItem
+                <ListItem 
                     title={item.name}
                     subtitle={item.description}
                     onPress={() => navigate('GolfcourseInfo', { golfcourseId: item.id })}

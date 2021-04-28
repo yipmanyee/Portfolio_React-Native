@@ -39,7 +39,7 @@ class Teetimes extends Component {
         return (
             <ScrollView>
                 <Mission />	
-                <Icon 
+                <Icon style={styles.icon}
                     name='calendar'
                     type='font-awesome'
                     color='#20972D'
@@ -172,6 +172,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         margin: 20
     },
+    icon: {
+        justifyContent: 'center',
+        
+    }
 });
 
 export default Teetimes;
