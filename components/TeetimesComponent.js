@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Alert, Modal, Pressable, Text, View, ScrollView, StyleSheet, 
-    Picker, Switch, Button } from 'react-native';
+    Picker, Switch, Button  } from 'react-native';
 import { Card, ListItem, Icon, Input } from 'react-native-elements';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
@@ -11,7 +11,8 @@ class Teetimes extends Component {
             date: new Date(),
             showCalendar: false,
             golfers: 1,
-            holes: 18,
+            holes: 9,
+            cart: false,
             showModal: false
         };
     }
@@ -30,7 +31,8 @@ class Teetimes extends Component {
             date: new Date(),
             showCalendar: false,
             golfers: 1,
-            holes: 18,
+            holes: 9,
+            cart: false,
             showModal: false    
         });
     }
@@ -101,7 +103,7 @@ class Teetimes extends Component {
                                 />
                         </View>
                         <View style={styles.formRow}>
-                            <Text style={styles.formLabel}>With or Withour Cart</Text>
+                            <Text style={styles.formLabel}>With or Without Cart</Text>
                                 <Switch
                                     style={styles.formItem}
                                     value={this.state.cart}
@@ -133,7 +135,6 @@ function Mission() {
             Book your Tee time online or call our Pro Shop at 253-473-3033 and reserve a round on our fun and challenging course.
             Whether you are professional tour player or and amateur 6 to 86 Meadow Park provides it all at an affordable price.
             </Text>
-        
         </Card>
         <Card title="Rates"         
         image={require('./images/golfcart.jpg')}>

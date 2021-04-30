@@ -4,7 +4,6 @@ import { ListItem } from 'react-native-elements';
 import { baseUrl } from '../shared/baseUrl';
 import { GOLFCOURSES } from '../shared/golfcourses';
 
-
 class Facilities extends Component {
 
     constructor(props) {

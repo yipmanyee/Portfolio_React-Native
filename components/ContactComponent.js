@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Text, ScrollView, Button } from 'react-native';
-import { Card, SocialIcon } from 'react-native-elements'
+import { Card } from 'react-native-elements'
 import FacebookApp from '../shared/facebook';
 
 class Contact extends Component {

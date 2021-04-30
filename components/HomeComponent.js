@@ -14,9 +14,6 @@ class Home extends Component {
                 <ImageBackground source={require('./images/golfcoursemain.jpg')} style={styles.image}>
                     <Text style={styles.text}>Meadow Park Golf Course</Text>
                 </ImageBackground>
-                <Text>Welcome to Meadow Park Golf Course, a fun and challenging place to play,
-                    practice and socialize. Whether you are professional tour player or and amateur 6 to 86 Meadow Park 
-                    provides it all at an affordable price.</Text>
             </View>
         );
     }
@@ -29,7 +26,7 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "white",
-        fontSize: 24,
+        fontSize: 35,
         fontWeight: "bold",
         textAlign: "center",
     },
@@ -37,12 +34,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "space-evenly"
     },
-    text: {
-        color: "white",
-        fontSize: 35,
-        textAlign: "center"
-    },
-
+    
 });
 
 export default Home;
